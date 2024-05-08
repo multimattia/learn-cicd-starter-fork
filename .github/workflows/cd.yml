@@ -19,16 +19,16 @@ jobs:
       - name: Run buildprod
         run: ./scripts/buildprod.sh
 
-      - name: 'auth'
+      - name: GCP auth
         uses: 'google-github-actions/auth@v2'
           with:
             credentials-json: '${{ secrets.GCP_CREDENTIALS }}'
 
-      - name: 'Set up Cloud SDK'
+      - name: Set up Cloud SDK
         uses: 'google-github-actions/setup-gcloud@v2'
 
-      - name: 'Use gcloud CLI'
+      - name: Use gcloud CLI
         run: 'gcloud info'
 
-      - name: 'Run deployment code'
+      - name: Run deployment code
         run:  gcloud builds submit --tag us-central1-docker.pkg.dev/spatial-framing-422717-b4/notely-ar-repo .
