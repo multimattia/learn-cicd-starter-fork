@@ -19,7 +19,7 @@ jobs:
       - name: Run buildprod
         run: ./scripts/buildprod.sh
 
-      - id: 'auth'
+      - name: 'auth'
         uses: 'google-github-actions/auth@v2'
           with:
             credentials-json: '${{ secrets.GCP_CREDENTIALS }}'
