@@ -31,4 +31,4 @@ jobs:
         run: 'gcloud info'
 
       - name: Run deployment code
-        run:  gcloud builds submit --tag us-central1-docker.pkg.dev/spatial-framing-422717-b4/notely-ar-repo .
+        run:  gcloud builds submit --tag us-central1-docker.pkg.dev/spatial-framing-422717-b4/notely-ar-repo/maatwo/notely:latest .
